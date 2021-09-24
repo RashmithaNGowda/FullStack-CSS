@@ -16,29 +16,45 @@
   .child{
     height: 350px;
     width: 250px;
+    margin: 10px;
   }
   .parent{
       min-height: 800px;
-      background-color: black;
+      background-color: #A3BBAD;
       display: flex;
       flex-direction: row;
-      justify-content:space-evenly;
+      justify-content:center;
       align-items: center;
       flex-wrap: wrap;
+      /* justify-items: center; */
+      /* justify-content: space-evenly; */
+      align-content: space-between;
+      /* margin: 10px; */
 
       
 
   }
+
+  nav{
+    background-color: #1E152A;
+    font-size: 1.5rem;
+    color: white;
+    padding: 20px;
+  } 
   
   
 </style>
 </head>
 <body>
+  <nav>Home</nav>
   <div class="parent">
     <div style="background-color: #DFBBB1;" class="child"></div>
     <div style="background-color: #F56476;" class="child"></div>
     <div style="background-color: #E43F6F;" class="child"></div>
     <div style="background-color: #BE3E82;" class="child"></div>
+    <div style="background-color: #FB3640;" class="child"></div>
+    <div style="background-color: #DFBBB1;" class="child"></div>
+
   </div>
  
 </body>
