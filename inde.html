@@ -15,27 +15,32 @@
   .parent{
     background: black;
     min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: center; */
 
   }
   .child{
-    background-color: rgb(51, 255, 0);
+    background-color: white;
     height: 100px;
     width: 100px;
     border-radius: 100px;
     /* transform: rotateY(100deg); */
     /* transform: scale(2); */
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+    /* transition-timing-function: cubic-bezier(0.04, 1.19, 1,-0.28); */
 
   }
    
   
   div.parent:hover div.child{
-    background-color: cyan;
+    background-color: crimson;
     /* transform: rotateY(120deg); */
     /* transform: rotateX(120deg); */
     /* transform: scale(0.4); */
-    transform: translateY(500px);
+    transform: translateX(1300px);
   }
  
  
