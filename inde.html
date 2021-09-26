@@ -5,12 +5,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Todo list</title>
+    <style>
+        .parent {
+            background-color: orange;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: 300px;
+        }
+        
+        .child {
+            height: 100px;
+            width: 100px;
+            background: black;
+            /* display: none; */
+            /* opacity: 0; */
+            /* transition: 1s ease; */
+        }
+        .parent:hover .child {
+            /* display: block; */
+            /* opacity: 1; */
+            visibility: hidden;
+           
+        }
+    </style>
 </head>
 
 <body>
     <div class="parent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium veniam eum sunt quae? Enim, sit! Nostrum hic laborum, numquam odio, necessitatibus illo sapiente cum ad dolore sit accusamus quod?
         <div class="child"></div>
     </div>
 </body>
