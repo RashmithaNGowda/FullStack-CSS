@@ -8,13 +8,22 @@
     text-decoration: none;
     color: unset;
     font-family: "Poppins";
+    
 }
 header{
     background-image: url('./assests/images/day.jpeg');
     height: 300px;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* align-self: center; */
+    flex-wrap: wrap;
+    position: relative;
+   
 }
+
 img.social{
     width: 20px;
     margin: 0px 10px;
@@ -31,3 +40,87 @@ footer{
     bottom: 0;
     width: 100%;
 }
+.parent1{
+    /* background-color: cyan; */
+    height: 400px;
+    width: 400px;
+    position: relative;
+    top: 100px;
+
+
+    
+}
+.child2{
+    color: white;
+    font-size: 1.5rem;
+}
+.child3 {
+    -webkit-appearance: none;
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background-color: white;
+    border-radius: 40px;
+    outline: none;
+  }
+  
+  .child3:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: navy;
+    border-radius: 50px;
+  }
+.child3{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    
+}
+.parent3{
+    height: 5%;
+    width: 100%;
+    background-color: white;
+   
+}
+.parent6{
+    display: flex;
+    display: inline-flexbox;
+    
+    
+
+}
+.addtask{
+    
+    flex-basis: 95%;  
+}
+.plus{
+    color: blue;
+    /* display: inline-flex; */
+    flex-basis: 5%;
+    font-weight: bolder;
+    font-size: 1rem;
+   
+}
+
+.parent5{
+    height: 10%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+   border-radius: 7px;
+    background-color: white;
+    color: black;
+    font-size: 0.9rem;
+}
+#unique{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
