@@ -1,3 +1,3 @@
 
 
-console.log(require('./index'))
+console.log(require('./utility'))
