@@ -1,3 +1,7 @@
+const {addition,subtraction,multiply,divide}= 
+ require('./utility')
 
-
-console.log(require('./utility'))
+addition()
+subtraction()
+multiply()
+divide()
