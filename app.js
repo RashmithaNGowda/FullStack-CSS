@@ -1,4 +1,6 @@
 const path=require('path')
-console.log(path.resolve('./utility.js'))
-
-console.log(path.relative('/',"./temp/utility.js"))
+console.log(path.extname('./app.js'))
+console.log(path.dirname('./temp/utility.js'))
+console.log(__dirname)
+console.log(path.join(__dirname,'./app.js'))
+console.log(path.resolve('./app.js'))
