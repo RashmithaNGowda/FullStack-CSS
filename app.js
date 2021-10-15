@@ -1,7 +1,14 @@
 const fs =require('fs')
 
-fs.readFile('./test.txt',(error,data)=>{
+fs.writeFile('./test.txt',` ${fs.readFileSync('./test.txt')} append mee plzz  `,(error)=>{
     if(error)console.log(error)
-    else console.log(typeof data)
+
   
 })
+
+
+
+// console.log(fs.readFileSync('./test.txt','utf8')
+// )
+
+console.log(`im a random log`)
