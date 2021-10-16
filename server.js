@@ -1,34 +1,34 @@
-// const http=require('http')
-// console.log(http)
-
-// const server =http.createServer((request,response)=>{
-//     const path = request.url
-//     response.write('<h1>im heading</h1>')
-//     response.end()
-
-// })
-
-// // console.log(server)
-// server.listen(3000,()=>{
-//     console.log(`Server listening at Port : ${3000}`)
-// })
 const express=require('express')
+const PORT=3000
 const app = express()
+// console.log(express)
 
-app.get('/',(req,res)=>{
-    console.log(req.url)
-    res.send("this is a response")
+// const verify=(req,res,next)=>{
+//     if(req.headers['user-agent']==="Thunder Client (https://www.thunderclient.io)") next()
+//     else res.send(" sorryy!! BLOCKED")
+// }
 
+app.get('/public',(req,res)=>{
+    res.send("This is PUBLIC ROUTE")
 })
-app.get('/login',(req,res)=>{
-    res.send("this is a response to LOGIN")
+// authentication--------
+const isAdmin=(req,res,next)=>{
+    if(req.headers.admin==="true")next()
+    else res.send("Sorry bruh! Not authorised Private Route")
 
-})
-app.get('/logout',(req,res)=>{
-    res.send("this is a response to LOGOUT")
+}
 
+app.get('/private',isAdmin,(req,res)=>{
+    res.send("Authorized")
 })
+
+// app.get('/',verify,(req,res)=>{
+//     // console.log(req.headers.host)
+//     res.send(" GET it bruh")
+//     // console.log(req)
+ 
+// })
 
 app.listen(3000,()=>{
-    console.log(`Server listening at Port : ${3000}`)
+    console.log(`Server listening at Port : ${PORT}`)
 })
