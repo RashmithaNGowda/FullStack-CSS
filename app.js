@@ -1,6 +1,5 @@
-const container = document.getElementById("app")
+const container = document.getElementById('app')
 
-// console.log(container)
-const content =  React.createElement('h2',{},"This is a heading")
+const content=React.createElement('h1',{},'hi')
 
 ReactDOM.render(content,container)
