@@ -1,10 +1,15 @@
+import Content from "./components/Content";
+import Footer from "./components/layouts/Footer";
+import Navbar from "./components/layouts/Navbar";
 
 function App() {
   return (
     <div className="App">
-       <h4>IM H4 heading</h4>
-       lorem
-      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem 
+      <Navbar />
+     <Content />
+
+
+      <Footer />
     </div>
   );
 }
