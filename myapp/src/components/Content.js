@@ -2,19 +2,37 @@ import ListItem from "./ListItem";
 import {useState} from 'react'
 
 const Content=()=>{
-  //  let  counter=0
-  let [counter,setCounter]=useState(0)
-  // console.log(counter)
-  // console.log(mysteryfunc)
+  //keeps track of todo items
+  const [items,setItems]=useState([])
+  //house whatever text we add into the input box 
+  const [value,setValue]=useState('')
+
+  const handleSubmit= ()=>{
+    //spread operator
+    setItems(prev=>[...prev,value])
+    // console.log([...items,'hi'])
+    // console.log(value)
+
+  }
+
+  const handleInput= (e)=>{
+    setValue(e.target.value)
+  }
 
 
     return(
-        <div className="container">
-        <h2>{counter}</h2>
-        <button  onClick={()=>{
-         setCounter(previousValue=> previousValue+1)
-        }}  >Click</button>
-      </div>
+      <>
+         <h2>Todo</h2>
+         <form>
+           <input onChange={handleInput}  type="text" />
+           <button onClick={handleSubmit} type="button">Add</button>
+         </form>
+         <ul>
+          {items.map(items =><li>{items}</li>)}
+         </ul>
+
+      </>
+        
     );
 }
 
