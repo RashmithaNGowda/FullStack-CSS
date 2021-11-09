@@ -5,11 +5,11 @@ import Navbar from "./components/layouts/Navbar";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-     <Content />
+      {/* <Navbar /> */}
+      <Content />
+     
 
-
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -1,14 +1,19 @@
+import ListItem from "./ListItem";
+import {useState} from 'react'
+
 const Content=()=>{
-    const chores=["Item 1","Item 2","Item 3","Item 4"]
+  //  let  counter=0
+  let [counter,setCounter]=useState(0)
+  // console.log(counter)
+  // console.log(mysteryfunc)
+
 
     return(
         <div className="container">
-        <ul>
-        {
-        chores.map(chore=><li>{chore}</li>)
-        }
-
-        </ul>
+        <h2>{counter}</h2>
+        <button  onClick={()=>{
+         setCounter(previousValue=> previousValue+1)
+        }}  >Click</button>
       </div>
     );
 }
