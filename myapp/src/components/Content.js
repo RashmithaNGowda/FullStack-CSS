@@ -10,6 +10,7 @@ const Content=()=>{
   const handleSubmit= ()=>{
     //spread operator
     setItems(prev=>[...prev,value])
+    setValue('')
     // console.log([...items,'hi'])
     // console.log(value)
 
@@ -19,16 +20,21 @@ const Content=()=>{
     setValue(e.target.value)
   }
 
+  const handleDelete=(items)=>{
+    setItems(prev=>prev.filter(i=> i !== items))
+  }
+
 
     return(
       <>
          <h2>Todo</h2>
          <form>
-           <input onChange={handleInput}  type="text" />
+           <input value={value}   onChange={handleInput}  type="text" />
            <button onClick={handleSubmit} type="button">Add</button>
          </form>
          <ul>
-          {items.map(items =><li>{items}</li>)}
+          {items.map(items =><li>{items}  <button  onClick={()=>{handleDelete(items)}}
+            >Delete</button>  </li>)}
          </ul>
 
       </>
