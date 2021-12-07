@@ -1,17 +1,14 @@
-import Description from './components/Description'
-   
+import {useState} from 'react';
+import One from './components/One';
+
+
 const App = () => {
-  
+
   return (
     <div>
-      
-      <Description heading={'I LOVE VENOM'} />
-      Hello im rashmitha im doing project on ml ie voice 
-      enabled ehr system
+      <One />
     </div>
-   
   );
 }
 
 export default App;
-
